@@ -25,6 +25,8 @@ const initializeDBAndServer = async () => {
 };
 initializeDBAndServer();
 
+
+//middle ware function to avoid redundancy
 const authenticateToken = (request,response,next) => {
     let jwtToken;
     const authHeader = request.headers["authorization"];
